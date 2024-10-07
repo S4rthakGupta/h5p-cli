@@ -96,6 +96,7 @@ function dashboard(options) {
       }
       this.showStatus('...');
       const type = contentTypes.value;
+      hi
       const output = await (await fetch(`${options.api}/create/${type}/${encodeURIComponent(createFolder.value)}`, {method: 'post'})).json();
       if (output.result) {
         window.location.href = `/edit/${type}/${output?.result}`;
